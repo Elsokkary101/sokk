@@ -8,6 +8,11 @@ $(document).ready(function(){
 		$('.menu-toggler').removeClass('open');
 		$('.top-nav').removeClass('open');
 	});
+	
+	$('.submission').on('click',function(){
+		alert("Thank You ya Basha! .. your response has been submitted!");
+		location.reload(true);
+	});
 
 	/*$('nav a[href*="#"]').on('click',function(){
 		$('html, body').animate(keyframes:{
@@ -15,7 +20,7 @@ $(document).ready(function(){
 		}, options:2000);
 	});
 
-
+	
 	$('#up').on('click',function(){
 		$('html, body').animate(keyframes:{
 			scrollTop:0
