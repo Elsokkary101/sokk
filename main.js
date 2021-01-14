@@ -8,6 +8,24 @@ $(document).ready(function(){
 		$('.menu-toggler').removeClass('open');
 		$('.top-nav').removeClass('open');
 	});
+	/* data sending form to google sheet*/
+	 $('.submission').on('click',function(){
+		alert("eshat 3leeeek");
+		location.reload(true);
+	});
+
+	$('#up').click(function(){
+        $('html, body').animate({scrollTop : 0},1500);
+        return false;
+    });
+
+    AOS.init({
+    	easing: 'ease',
+    	duration : 1800,
+    	once : true
+    });
+
+    /* end of sending data*/
 
 	/*$('nav a[href*="#"]').on('click',function(){
 		$('html, body').animate(keyframes:{
@@ -26,16 +44,5 @@ $(document).ready(function(){
     	$('.contact .container form').find('input:text').val(''); 
     	$('input:checkbox').removeAttr('checked');
 	});*/
-
-	$('#up').click(function(){
-        $('html, body').animate({scrollTop : 0},1500);
-        return false;
-    });
-
-    AOS.init({
-    	easing: 'ease',
-    	duration : 1800,
-    	once : true
-    });
 
 });

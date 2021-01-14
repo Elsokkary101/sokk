@@ -1,3 +1,50 @@
+
+
+
+
+
+
+/******************/
+.blog-post__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	border-radius: .8rem;
+}
+
+.blog-post {
+	margin-bottom: 8rem;
+	
+	width : 100%;
+	max-width: 98rem;
+	padding: 5rem;
+	background-color: rgba(255,255,255,0.5);
+	box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.2);
+	display: flex;
+	align-items: center;
+	border-radius: .8rem;
+}
+.blog-post__img {
+	min-width: 35rem;
+	max-width: 35rem;
+	height: 30rem;
+	transform: translateX(-8rem);
+}
+
+.blog-post__title {
+	font-size: 5rem;
+	margin: 0.2rem 0 0.5rem 0;
+	text-transform: uppercase;
+}
+
+.blog-post__text {
+	margin-bottom: 4rem;
+	font-size: 1.4rem;
+}
+/********************/
+
+
 *{
 	margin : 0;
 	padding: 0;
@@ -13,7 +60,7 @@ html {
 body {
 	width :auto;
 	height: 100%;
-	background: url("image/sitebg.jpg") no-repeat center fixed;
+	background: url("image/background.jpg") no-repeat center fixed;
 	background-size: cover;
 	overflow-x: hidden;
 }
@@ -244,7 +291,7 @@ li {
 
 .about-heading h1{
 	font-size: 10rem;
-	opacity: 0.3;
+	opacity: 0.7;
 }
 
 .about-heading h6 {
@@ -335,6 +382,9 @@ li {
 	transform: rotate(-45deg);
 }
 /*services*/
+.service {
+	justify-content: center;
+}
 
 .portfolio-item{
 	display:flex;
@@ -487,9 +537,72 @@ input[type="submit"]:hover{
 	color: #221e3f;
 	background-color: #ffe838;
 }
+ /*---------*/
+form .box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+form .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+form .overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+/*-----------*/
 
 /* el form*/
-
+footer{
+	width: 100%;
+}
 .copyright {
 	text-align: center;
 	width: 100%;
@@ -539,8 +652,27 @@ input[type="submit"]:hover{
 }
 
 @media screen and (max-width: 768px){
+
+	.blog-post {
+		padding: 2rem;
+		flex-direction: column;
+	}
+
+	.blog-post__title {
+		font-size: 4rem;
+	}
+	.blog-post__text {
+		font-size: 1.75rem;
+	}
+
+	.blog-post__img {
+		min-width: 100%;
+		max-width: 100%;
+		transform: translate(0 , -8rem);
+	}
+
 	body {
-		background: url("image/sitebg2.jpg") no-repeat center fixed;
+		background: url("image/background.jpg") no-repeat center fixed;
 		background-size: cover;
 	}
 
@@ -584,7 +716,7 @@ input[type="submit"]:hover{
 	}
 
 	.about-heading p{
-		font-size: 0.05rem;
+		font-size: 0.75rem;
 	}
 
 	.about-details .nav-list{
@@ -619,6 +751,17 @@ input[type="submit"]:hover{
 }
 
 @media screen and (max-width: 600px) {
+
+	.blog-post {
+		padding: 2rem;
+		flex-direction: column;
+	}
+
+	.blog-post__img {
+		min-width: 100%;
+		max-width: 100%;
+		transform: translate(0 , -8rem);
+	}
 	.menu-toggler{
 		top: 2rem;
 		right : 2rem;
